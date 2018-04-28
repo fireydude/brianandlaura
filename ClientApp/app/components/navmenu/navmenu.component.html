@@ -13,20 +13,31 @@
         <div class='navbar-collapse collapse'>
             <ul class='nav navbar-nav'>
                 <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/home']">
-                        <span class='glyphicon glyphicon-home'></span> Tips
+                    <a [routerLink]="['/day']">
+                        <span class='glyphicon glyphicon-heart'></span> The Day
                     </a>
                 </li>
                 <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/counter']">
-                        <span class='glyphicon glyphicon-education'></span> Travel
+                    <a [routerLink]="['/travel']">
+                        <span class='glyphicon glyphicon-plane'></span> Travel
                     </a>
                 </li>
                 <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/fetch-data']">
-                        <span class='glyphicon glyphicon-th-list'></span> Presents
+                    <a [routerLink]="['/accomodation']">
+                        <span class='glyphicon glyphicon-bed'></span> Accomodation
                     </a>
                 </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/invite']">
+                        <span class='glyphicon glyphicon-envelope'></span> RSVP
+                    </a>
+                </li>
+     <!--           <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/gift']">
+                        <span class='glyphicon glyphicon-gift'></span> Gifts
+                    </a>
+                </li>
+            -->
             </ul>
         </div>
     </div>
