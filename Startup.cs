@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -40,6 +41,10 @@ namespace wedding
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            var rewriteOptions = new RewriteOptions();
+            rewriteOptions.Add(new PermanentRedirect());
+            app.UseRewriter(rewriteOptions);
 
             app.UseStaticFiles();
 
